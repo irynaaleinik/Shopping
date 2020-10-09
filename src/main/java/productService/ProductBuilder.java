@@ -2,7 +2,7 @@ package productService;
 
 public class ProductBuilder {
     private String name;
-    private String type;
+    private ProductsType type;
     private int cost;
 
     public ProductBuilder setName(String name) {
@@ -10,7 +10,7 @@ public class ProductBuilder {
         return this;
     }
 
-    public ProductBuilder setType(String type) {
+    public ProductBuilder setType(ProductsType type) {
         this.type = type;
         return this;
     }

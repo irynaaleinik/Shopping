@@ -2,33 +2,15 @@ package productService;
 
 public class ProductFactory {
 
-    public Product createProduct(ProductsType type){
+    public static Product createProduct(ProductsType type, String name, int cost){
         ProductBuilder productBuilder = new ProductBuilder();
         Product product = new Product();
+        product =  productBuilder
+                .setName(name)
+                .setType(type)
+                .setCost(cost)
+                .buildProduct();
 
-        switch (type){
-            case VEGETABLE:
-                product =  productBuilder
-                        .setName("Tomato")
-                        .setType("Vegetable")
-                        .setCost(10)
-                        .buildProduct();
-                break;
-            case MEAT:
-                product = productBuilder
-                        .setName("Pork")
-                        .setType("Meat")
-                        .setCost(30)
-                        .buildProduct();
-                break;
-            case DAIRY:
-                product = productBuilder
-                        .setName("Milk")
-                        .setType("Dairy")
-                        .setCost(5)
-                        .buildProduct();
-                break;
-        }
         return product;
 
     }

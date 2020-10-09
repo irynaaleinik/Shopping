@@ -1,16 +1,16 @@
 package productService;
 
-class Product {
+public class Product {
 
     private String name;
-    private String type;
+    private ProductsType type;
     private int cost;
 
     void setName(String name) {
         this.name = name;
     }
 
-    void setType(String type) {
+    void setType(ProductsType type) {
         this.type = type;
     }
 
@@ -18,15 +18,15 @@ class Product {
         this.cost = cost;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    String getType() {
+    public ProductsType getType() {
         return type;
     }
 
-    int getCost() {
+    public int getCost() {
         return cost;
     }
 
